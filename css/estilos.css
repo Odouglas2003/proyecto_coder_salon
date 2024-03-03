@@ -8,6 +8,11 @@
     font-family:'Cormorant Garamond' ;
     font-weight: 900;
 }
+h1{
+    color: rgb(63, 165, 42);/*       Coloreado del texto */
+    font-family: 'Single Day';/*       Fuente elegida por el usuario */
+    font-weight: 900; 
+}
 .header{
     background: linear-gradient(100deg,
             rgba(255, 146, 4)0%,
@@ -30,9 +35,10 @@
         background-color: #fdf497;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(auto,2);
-        grid-template-areas: "divinicio sectioninicio "
-                            "divinicio contenedortarjetaindex ";
+        grid-template-rows: repeat(auto,3);
+        grid-template-areas: "divinicio divinicio "
+                            "  sectioninicio sectioninicio"
+                            " contenedortarjetaindex contenedortarjetaindex ";
         .divinicio{/*       Establecemos una clase para darle estilos a esta seccion */
             grid-area: divinicio;
         }
@@ -64,10 +70,32 @@
             }
         }
     }
-
-
+    @media screen and (min-width: 768px){
+        .contenedormaingrid{
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(auto,2);
+            grid-template-areas: "divinicio sectioninicio "
+                                "divinicio contenedortarjetaindex ";
+        }
+    }
 }
-
+.redfacebok{
+    .fab{
+        margin-top: 13px;/*   espacio superior para que no esten pegados abajo */
+        font-size: 2.2rem;/*    tamaño de las redes sociales */
+    }
+}
+.redinstagram{
+    .fab{
+        color: #000000;/*  Color de las redes sociales */
+        border-radius: 100px 100px 100px 100px;/*   redondea el cuadrado inferior de la i de instagram */
+        margin-top: 5px;/*    espacio inferior para que no esten pegados arriba */
+        font-size: 2.2rem;/*    tamaño de las redes sociales */
+        background: #d6249f;/* #e74c3c;*//*color rojo instagram*/
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        box-shadow: 0px 3px 10px rgba(0,0,0,.25);/*  sombra al redondear el icono */
+    }
+}
 .footer{
     background: linear-gradient(100deg,
     rgb(255, 146, 4)0%,
@@ -99,24 +127,6 @@
         .redes{
             height: 200px;
             width: 200px;
-            .redfacebok{
-                .fab{
-                    margin-top: 13px;/*   espacio superior para que no esten pegados abajo */
-                    font-size: 2.2rem;/*    tamaño de las redes sociales */
-                }
-            }
-            .redinstagram{
-                .fab{
-                    color: #000000;/*  Color de las redes sociales */
-                    border-radius: 100px 100px 100px 100px;/*   redondea el cuadrado inferior de la i de instagram */
-                    margin-top: 5px;/*    espacio inferior para que no esten pegados arriba */
-                    font-size: 2.2rem;/*    tamaño de las redes sociales */
-                    background: #d6249f;/* #e74c3c;*//*color rojo instagram*/
-                    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-                    box-shadow: 0px 3px 10px rgba(0,0,0,.25);/*  sombra al redondear el icono */
-                }
-            }
-    
         }
         .sobrenosotro{
             width: 300px;
@@ -126,13 +136,54 @@
 }
 
 .iconowaht{
-    .iconowaht{
-        right: 10px;/*  posicion en x */
-        bottom: 10px;/*  posicion en la parte inferior de la pantalla*/
-        .fa-whatsapp{
-            color: green;/* */
-            font-size: 4rem;  /* */ 
+    .fa-whatsapp{
+        color: green;/* */
+        font-size: 4rem;  /* */ 
+    }
+}
+.maincont{
+    background-color: #fdf497;
+    .h3footer{
+        color: rgb(20, 88, 7);/*        Color del texto */
+        font-family: 'Single Day';/*    Familia de fuentes elegida por el usuario */
+    }
+    .contenedorcontacto{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto,3);
+        grid-template-areas: "contactos"
+                             "rede"
+                             "frmulario";
+        p{
+            font-family: 'Cormorant Garamond', serif;/*       Fuente elegida por el usuario */
+            font-weight: 600;
+        }
+        .contactos{
+            grid-area: contactos;
+            .fa-whatsapp{
+                color: green;/* */
+                font-size: 4rem;  /* */   
+            }
+            .fa-map-marker-alt{
+                font-size: 4rem;  /* */
+            }
+            .fa-home{
+                font-size: 4rem;  /* */
+            }
+        }
+        .formulario{
+            grid-area: formulario;
+        }
+        .rede{
+            grid-area: rede;
         }
     }
-
+    @media screen and (min-width: 768px){
+        .contenedorcontacto{
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(auto,1);
+            grid-template-areas: "contactos formulario rede";
+        }
+    }
 }
+
