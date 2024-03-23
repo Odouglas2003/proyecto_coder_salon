@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Nunito:ital,wght@1,300&display=swap');
+@import 'variable';
+@import 'contacto';
+@import 'juegos';
+@import 'espacio';
+@import 'reset';
+@import 'promociones';  
+@import 'boton';
+@import 'tarjetas';
+@import 'logo';
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ajusta según sea necesario para asegurar que esté por encima de otros elementos */
+    background-color: #fff; /* Cambia el color de fondo según tu diseño */
+  /* Añade otros estilos según necesites */
+    background: $background;
+  
+    /* aca le damo un degrade de colores*/
+    .logoheader {
+      width: 150px;
+      /* que ocupe solo lo necesario*/
+      border-radius: 29px 29px 29px 29px;
+      /*  los angulos redondeados del logo*/
+    }
+  
+    .nav-item {
+      border: 2px solid #000000;
+      /*  La linea que hay entre cada navbar */
+    }
+  }
+  .main {
+    .contenedormaingrid {
+      background-color:$background-color;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(auto, 3);
+      grid-template-areas: "divinicio divinicio "
+        "  sectioninicio sectioninicio"
+        " contenedortarjetaindex contenedortarjetaindex ";
+  
+      .divinicio {
+        /*       Establecemos una clase para darle estilos a esta seccion */
+        grid-area: divinicio;
+      }
+  
+      .sectioninicio {
+        grid-area: sectioninicio;
+  
+        .hiindex {
+          /*           Establecemos una clase para darle estilos al h1 principal */
+          color: rgb(63, 165, 42);
+          /*       Coloreado del texto */
+          font-family: 'Single Day';
+          /*       Fuente elegida por el usuario */
+          font-weight: 900;
+        }
+  
+        .h2index {
+          font-family: 'Cormorant Garamond', serif;
+          /*       Fuente elegida por el usuario */
+          font-weight: 600;
+        }
+      }
+  
+      .contenedortarjetaindex {
+        grid-area: contenedortarjetaindex;
+        width: 88%;
+        /*               Ancho del contendor tarjeta */
+        margin: 50px auto;
+  
+        /*       Margen superior e inferior y centrado horizontal */
+        .tarjeta {
+          background-color: #87eb44d2;
+          /*       Color de fondo de cada tarjeta */
+          border-radius: 0px 0px 29px 29px;
+          /*       Esquina superior izquierda redonda y esquina inferior derecha redonda */
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+          width: 40%;
+          /*              Ancho de cada tarjeta */
+          margin: 18px;
+  
+          /*              Espaciamiento entre las tarjetas */
+          .imgetarjeta {
+            height: 150px;
+            /*              Altura de la imagen de la tarjeta */
+          }
+        }
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      .contenedormaingrid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(auto, 2);
+        grid-template-areas: "divinicio sectioninicio "
+          "divinicio contenedortarjetaindex ";
+      }
+    }
+  }
+  
+  .redfacebok {
+    .fab {
+      margin-top: 13px;
+      /*   espacio superior para que no esten pegados abajo */
+      font-size: 2.2rem;
+      /*    tamaño de las redes sociales */
+    }
+  }
+  
+  .redinstagram {
+    .fab {
+      color: #000000;
+      /*  Color de las redes sociales */
+      border-radius: 100px 100px 100px 100px;
+      /*   redondea el cuadrado inferior de la i de instagram */
+      margin-top: 5px;
+      /*    espacio inferior para que no esten pegados arriba */
+      font-size: 2.2rem;
+      /*    tamaño de las redes sociales */
+      background: #d6249f;
+      /* #e74c3c;*/
+      /*color rojo instagram*/
+      background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, .25);
+      /*  sombra al redondear el icono */
+    }
+  }
+  
+  .footer {
+    background: $background;
+  
+    /* aca le damos un degrade de colores*/
+    .contenedorfooter {
+      row-gap: 2em;
+  
+      /*           Espaciamiento entre las filas */
+      .h3footer {
+        color: rgb(20, 88, 7);
+        /*        Color del texto */
+        font-family: 'Single Day';
+        /*    Familia de fuentes elegida por el usuario */
+      }
+  
+      .contactoindex {
+        height: 200px;
+        width: 200px;
+  
+        /*              Ancho de cada tarjeta */
+        .Ubicacionindex {
+          .fas {
+            margin-top: 10px;
+            /*   espacion superior para que no esten pegados abajo de otros iconos */
+            font-size: 1.2rem;
+            /*   tamaño de las flechas */
+          }
+        }
+  
+        .telfonofooter {
+          .fa-brands {
+            margin-top: 5px;
+            /*   espacio superior para que no esten pegados abajo */
+            font-size: 1.2rem;
+            /*    tamaño de las marcas de telefono */
+          }
+        }
+      }
+  
+      .redes {
+        height: 200px;
+        width: 200px;
+      }
+  
+      .sobrenosotro {
+        width: 300px;
+      }
+  
+    }
+  }
+  
+  .iconowaht {
+    .fa-whatsapp {
+      color: green;
+      /* */
+      font-size: 4rem;
+      /* */
+    }
+  }

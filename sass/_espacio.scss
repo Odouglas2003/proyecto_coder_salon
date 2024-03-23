@@ -1,0 +1,171 @@
+
+.mainespacio {
+    background-color:$background-color;
+    overflow: hidden;
+    .parafo{
+      font-weight: 900;
+      line-height: 1.7;
+      font-size: 16px;
+      span{
+        font-size: 20px;
+        color: rgb(255, 0, 0);
+      }
+    }
+    
+  
+    .imgetarjeta {
+      height: 100%;
+      /*              Altura de la imagen de la tarjeta */
+      width: 100%;
+    }
+  
+    .entrada {
+      .textoentrada{
+        .entradaas {
+          color: rgb(20, 88, 7);
+          /*        Color del texto */
+          font-family: 'Single Day';
+          /*    Familia de fuentes elegida por el usuario */
+          
+        }
+
+      }
+      
+
+  
+      .conteespacioentra {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(100%, 2);
+        grid-template-areas: "tarjeta1 tarjeta1"
+          "tarjeta2 tarjeta3";
+  
+        .tarjeta1 {
+          grid-area: tarjeta1;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+  
+        .tarjeta2 {
+          grid-area: tarjeta2;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+  
+        .tarjeta3 {
+          grid-area: tarjeta3;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+      }
+  
+      @media screen and (max-width: 768px) {
+        .conteespacioentra {
+          grid-template-columns: 300px;
+          grid-template-rows: repeat(auto, 3);
+          grid-template-areas: "tarjeta1"
+            "tarjeta2"
+            "tarjeta3";
+        }
+      }
+    }
+  
+    .Teen {
+      .teen {
+        color: rgb(20, 88, 7);
+        /*        Color del texto */
+        font-family: 'Single Day';
+        /*    Familia de fuentes elegida por el usuario */
+      }
+  
+      .conteespacioentra {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: repeat(100%, 2);
+        grid-template-areas: "tarjeta1 tarjeta2"
+          "tarjeta1 tarjeta3";
+  
+        .tarjeta1 {
+          grid-area: tarjeta1;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+  
+        .tarjeta2 {
+          grid-area: tarjeta2;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+  
+        .tarjeta3 {
+          grid-area: tarjeta3;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+      }
+  
+      @media screen and (max-width: 768px) {
+        .conteespacioentra {
+          grid-template-columns: 400px;
+          grid-template-rows: repeat(auto, 3);
+          grid-template-areas: "tarjeta1"
+            "tarjeta2"
+            "tarjeta3";
+        }
+      }
+    }
+  
+    .Burbugita {
+      .burguga {
+        color: rgb(20, 88, 7);
+        /*        Color del texto */
+        font-family: 'Single Day';
+        /*    Familia de fuentes elegida por el usuario */
+      }
+  
+      .conteespacioentraa {
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: repeat(100%, 2);
+        grid-template-areas: "tarjeta1 tarjeta4"
+          "tarjeta2 tarjeta3";
+  
+        .tarjeta1 {
+          grid-area: tarjeta1;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+  
+        .tarjeta2 {
+          grid-area: tarjeta2;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+  
+        .tarjeta3 {
+          grid-area: tarjeta3;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+  
+        .tarjeta4 {
+          grid-area: tarjeta4;
+          border: 2px solid #000000;
+          /*           Borde de cada tarjeta */
+        }
+      }
+  
+      @media screen and (max-width: 768px) {
+        .conteespacioentraa {
+          grid-template-columns: 400px;
+          grid-template-rows: repeat(auto, 3);
+          grid-template-areas: "tarjeta1"
+            "tarjeta2"
+            "tarjeta3"
+            "tarjeta4";
+        }
+      }
+    }
+  
+  
+  }

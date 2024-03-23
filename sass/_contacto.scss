@@ -1,0 +1,62 @@
+.maincont {
+    background-color: $background-color;
+    overflow: hidden;
+    .h3footer {
+      color: rgb(20, 88, 7);
+      /*        Color del texto */
+      font-family: 'Single Day';
+      /*    Familia de fuentes elegida por el usuario */
+    }
+  
+    .contenedorcontacto {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto, 3);
+      grid-template-areas: "contactos"
+        "rede"
+        "frmulario";
+  
+      p {
+        font-family: 'Cormorant Garamond', serif;
+        /*       Fuente elegida por el usuario */
+        font-weight: 600;
+      }
+  
+      .contactos {
+        grid-area: contactos;
+  
+        .fa-whatsapp {
+          color: green;
+          /* */
+          font-size: 4rem;
+          /* */
+        }
+  
+        .fa-map-marker-alt {
+          font-size: 4rem;
+          /* */
+        }
+  
+        .fa-home {
+          font-size: 4rem;
+          /* */
+        }
+      }
+  
+      .formulario {
+        grid-area: formulario;
+      }
+  
+      .rede {
+        grid-area: rede;
+      }
+    }
+  
+    @media screen and (min-width: 768px) {
+      .contenedorcontacto {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(auto, 1);
+        grid-template-areas: "contactos formulario rede";
+      }
+    }
+  }
